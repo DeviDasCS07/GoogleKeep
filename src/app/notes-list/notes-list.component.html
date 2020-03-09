@@ -1,0 +1,17 @@
+<section>
+<ul>
+  <li *ngFor="let element of notes"><mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{element.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{element.description}}
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="delete(element.id)">Delete</button>
+      <button  mat-raised-button color="primary" *ngIf="!showUnArchiveBtn" (click)="archive(element.id)">Archive</button>
+      <button  mat-raised-button color="primary" *ngIf="showUnArchiveBtn" (click)="archive(element.id)">UnArchive</button>
+    </mat-card-actions>
+  </mat-card></li>
+</ul>
+</section>

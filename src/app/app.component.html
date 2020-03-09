@@ -1,0 +1,15 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenv opened mode="side" position="start" class="button-container">
+    <button mat-raised-button color="accent" class="btn-note" (click)="navigateToNotesDashBoard()">Notes</button> <br/>
+    <button mat-raised-button color="accent" class="btn-archive" (click)="navigateToArchivesDashBoard()">Archives</button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenv.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      Angular Google Keep
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

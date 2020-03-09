@@ -1,0 +1,5 @@
+<section>
+  <app-search-notes (inputTextChanged)="onInputTextChanged($event)"> </app-search-notes>
+  <button class="ml-20" mat-raised-button color="accent" (click)="openAddNoteDialog()">Add Note</button>
+  <app-notes-list [notes]="notes | filter : searchText" (deleteNote)="onDeleteNote($event)" [showUnArchiveBtn]="false" (archiveNote)="onArchiveNote($event)"></app-notes-list>
+</section>
